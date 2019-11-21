@@ -1,2 +1,2 @@
 # NCOE-MOE
-Project for national college of education
+ system for national college of education
