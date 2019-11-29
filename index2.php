@@ -46,16 +46,20 @@
                         <form method="post" action="a_ldetailsubmission.php" autocomplete="on">
 
                             <p>
+                            <div id="" class="animate form">
+                        <form method="post" action="a_ldetailsubmission.php" autocomplete="on">
+
+                            <p>
                             <div class="input-group input-group-sm mb-3"> 
                                 <label for="" class="academicYr" data-icon="p">Academic Year </label>
                                 <select name="academicYr" class="form-control">
                                 <option value="pick">Year</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT academicYr From a_ldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From academicyr");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
                                         
-                                    echo "<option value='".$row['academicYr']."'>" .$row['academicYr'] ."</option>" ;
+                                    echo "<option value='".$row['idacademicyr']."'>" .$row['academicyr'] ."</option>" ;
                                     // echo "<option value='Colombo'>Colombo</option>" ;
                                 }
                                 ?>
@@ -69,11 +73,11 @@
                                 <select name="stream" class="form-control">
                                 <option value="pick">stream</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT stream From a_ldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From streamdetails");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
                                         
-                                    echo "<option value='".$row['stream']."'>" .$row['stream'] ."</option>" ;
+                                    echo "<option value='".$row['idstreamdetails']."'>" .$row['streamdetails'] ."</option>" ;
                                     // echo "<option value='Colombo'>Colombo</option>" ;
                                 }
                                 ?>
@@ -88,11 +92,11 @@
                                 <select name="medium" class="form-control">
                                 <option value="pick">medium</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT medium From a_ldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From mediumdetails");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
                                         
-                                    echo "<option value='".$row['medium']."'>" .$row['medium'] ."</option>" ;
+                                    echo "<option value='".$row['idmediumdetails']."'>" .$row['mediumdetails'] ."</option>" ;
                                     // echo "<option value='Colombo'>Colombo</option>" ;
                                 }
                                 ?>
@@ -106,11 +110,11 @@
                                 <select name="medium" class="form-control">
                                 <option value="pick">medium</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT attempt From a_ldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From attemptcount");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
                                         
-                                    echo "<option value='".$row['attempt']."'>" .$row['attempt'] ."</option>" ;
+                                    echo "<option value='".$row['idattemptcount']."'>" .$row['attemptcount'] ."</option>" ;
                                     // echo "<option value='Colombo'>Colombo</option>" ;
                                 }
                                 ?>

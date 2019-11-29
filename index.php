@@ -47,7 +47,7 @@
                                 
                                 <p>
                                 <div class="input-group input-group-sm mb-3">
-                                    <label for="fullname" class="fname" data-icon="u">Full Name</label>
+                                    <label for="fullname" class="fname" data-icon="u">Full nName</label>
                                     <input class="form-control" id="fullname" name="fullname" required="required" type="text" placeholder="full name" />
                                 </div>
                                 </p>
@@ -93,15 +93,15 @@
                                 
                                 <p>
                             <div class="input-group input-group-sm mb-3"> 
-                                <label for="" class="district" data-icon="p">District of Permanent Residence </label>
-                                <select name="district" class="form-control">
-                                <option value="pick">District</option>
+                                <label for="" class="districtdetails_iddistrictdetails" data-icon="p">District of Permanent Residence </label>
+                                <select name="districtdetails_iddistrictdetails" class="form-control">
+                                <option value="pick" disabled selected>District</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT districtName From districtdetails");
+                                    $sql = mysqli_query($conn, "SELECT * From districtdetails WHERE status=1");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
                                         
-                                    echo "<option value='".$row['districtName']."'>" .$row['districtName'] ."</option>" ;
+                                    echo "<option value='".$row['iddistrictdetails']."'>" .$row['districtname'] ."</option>" ;
                                     // echo "<option value='Colombo'>Colombo</option>" ;
                                 }
                                 ?>
@@ -111,14 +111,14 @@
 
                             <p>
                             <div class="input-group input-group-sm mb-3">
-                                <label for="" class="ethnicity" data-icon="p">Ethnicity </label>
-                                <select name="ethnicity" class="form-control">
-                                <option value="pick">Ethnicity</option>
+                                <label for="" class="ethnicity_idethnicity" data-icon="p">Ethnicity </label>
+                                <select name="ethnicity_idethnicity" class="form-control">
+                                <option value="pick" disabled>Ethnicity</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT Ethnicity From personaldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From ethnicity WHERE status=1");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
-                                    echo "<option value='".$row['Ethnicity']."'>" .$row['Ethnicity'] ."</option>" ;
+                                    echo "<option value='".$row['idethnicity']."'>" .$row['ethnicityname'] ."</option>" ;
                                 }
                                 ?>
                                 </select>
@@ -127,14 +127,14 @@
 
                             <p>
                             <div class="input-group input-group-sm mb-3">
-                                <label for="" class="religion" data-icon="p">Religion </label>
-                                <select name="religion" class="form-control">
-                                <option value="pick">Religion</option>
+                                <label for="" class="religiondetails_idreligiondetails" data-icon="p">Religion </label>
+                                <select name="religiondetails_idreligiondetails" class="form-control">
+                                <option value="pick" disabled>Religion</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT Religion From personaldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From religiondetails WHERE religionstatus=1");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
-                                    echo "<option value='".$row['Religion']."'>" .$row['Religion'] ."</option>" ;
+                                    echo "<option value='".$row['idreligiondetails']."'>" .$row['religionname'] ."</option>" ;
                                 }
                                 ?>
                                 </select>
@@ -143,14 +143,14 @@
 
                             <p>
                             <div class="input-group input-group-sm mb-3">
-                                <label for="" class="gender" data-icon="p">Gender </label>
-                                <select name="gender" class="form-control">
-                                <option value="pick">Gender</option>
+                                <label for="" class="genderdetails_idgenderdetails" data-icon="p">Gender </label>
+                                <select name="genderdetails_idgenderdetails" class="form-control">
+                                <option value="pick" disabled>Gender</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT Gender From personaldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From genderdetails");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
-                                    echo "<option value='".$row['Gender']."'>" .$row['Gender'] ."</option>" ;
+                                    echo "<option value='".$row['idgenderdetails']."'>" .$row['gender'] ."</option>" ;
                                 }
                                 ?>
                                 </select>
@@ -160,14 +160,14 @@
                             <p>
                             <div class="input-group input-group-sm mb-3">    
                                 <br>
-                                <label for="" class="attemptCount" data-icon="p">Number of Attempts (Advanced Level) </label>
-                                <select name="attemptCount" class="form-control">
-                                <option value="pick">attempt</option>
+                                <label for="" class="attemptcount" data-icon="p">Number of Attempts (Advanced Level) </label>
+                                <select name="attemptcount" class="form-control">
+                                <option value="pick" disabled>attempt</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT AcademicYr From personaldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From attemptcount");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
-                                    echo "<option value='".$row['AcademicYr']."'>" .$row['AcademicYr'] ."</option>" ;
+                                    echo "<option value='".$row['idattemptcount']."'>" .$row['attemptcount'] ."</option>" ;
                                 }
                                 ?>
                                 </select>
