@@ -53,7 +53,7 @@
                             <div class="input-group input-group-sm mb-3"> 
                                 <label for="" class="academicYr" data-icon="p">Academic Year </label>
                                 <select name="academicYr" class="form-control">
-                                <option value="pick">Year</option>
+                                <option value="pick" disabled selected>Year</option>
                                 <?php
                                     $sql = mysqli_query($conn, "SELECT * From academicyr");
                                     $row = mysqli_num_rows($sql);
@@ -71,7 +71,7 @@
                             <div class="input-group input-group-sm mb-3"> 
                                 <label for="" class="stream" data-icon="p">Stream </label>
                                 <select name="stream" class="form-control">
-                                <option value="pick">stream</option>
+                                <option value="pick" disabled selected>stream</option>
                                 <?php
                                     $sql = mysqli_query($conn, "SELECT * From streamdetails");
                                     $row = mysqli_num_rows($sql);
@@ -90,7 +90,7 @@
                             <div class="input-group input-group-sm mb-3"> 
                                 <label for="" class="medium" data-icon="p">Medium </label>
                                 <select name="medium" class="form-control">
-                                <option value="pick">medium</option>
+                                <option value="pick" disabled selected>medium</option>
                                 <?php
                                     $sql = mysqli_query($conn, "SELECT * From mediumdetails");
                                     $row = mysqli_num_rows($sql);
@@ -108,7 +108,7 @@
                             <div class="input-group input-group-sm mb-3"> 
                                 <label for="" class="attempt" data-icon="p">Attempt </label>
                                 <select name="medium" class="form-control">
-                                <option value="pick">medium</option>
+                                <option value="pick" disabled selected>attempt</option>
                                 <?php
                                     $sql = mysqli_query($conn, "SELECT * From attemptcount");
                                     $row = mysqli_num_rows($sql);
@@ -123,16 +123,7 @@
                             </p>
 
 
-                            <label class="subjects" for="states">Please fill the table</label>
-                            <div class="button dropdown"> 
-                            <select id="streamselector">
-                                <option value="biology">Biology</option>
-                                <option value="physicalscience">Physical Science</option>
-                                <option value="commerce">Commerce</option>
-                                <option value="arts">Arts</option>
-                                <option value="technical">Technical</option>		
-                                </select>
-                            </div>
+                            
 
 
                         <div class="output">
@@ -147,13 +138,13 @@
                             
                             <td> data-icon="p">subject </label>
                                 <select name="biology" class="form-control">
-                                <option value="pick">biology</option>
+                                <option value="pick" disabled selected>Subject</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT biology From alstreamdetails");
+                                    $sql = mysqli_query($conn, "SELECT * From subjectdetails WHERE examname='al'");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
                                         
-                                    echo "<option value='".$row['biology']."'>" .$row['biology'] ."</option>" ;
+                                    echo "<option value='".$row['idsubjectdetails']."'>" .$row['subjectname'] ."</option>" ;
                                     
                                 }
                                 ?>
@@ -164,11 +155,11 @@
                                 <select name="grade" class="form-control">
                                 <option value="pick">grade</option>
                                 <?php
-                                    $sql = mysqli_query($conn, "SELECT grade From a_ldetailsbuiltin");
+                                    $sql = mysqli_query($conn, "SELECT * From gradedetails");
                                     $row = mysqli_num_rows($sql);
                                     while ($row = mysqli_fetch_array($sql)){
                                         
-                                    echo "<option value='".$row['grade']."'>" .$row['grade'] ."</option>" ;
+                                    echo "<option value='".$row['idgradedetails']."'>" .$row['gradedetails'] ."</option>" ;
                                     
                                 }
                                 ?>
