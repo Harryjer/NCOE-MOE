@@ -26,7 +26,7 @@
                              
                                     // var_dump($district);
                                 if(isset($_POST["submit"])){
-                                if($query = mysqli_query($conn,"INSERT INTO o_lresultsdetails (academicyr, medium, attempt, olsubject1, olgrade1, olsubject2, olgrade2, olsubject3, olgrade3, , olsubject4, olgrade4, olsubject5, olgrade5, olsubject6, olgrade6, olsubject7, olgrade7, olsubject8, olgrade8, olsubject9, olgrade9) 
+                                if($query = mysqli_query($conn,"INSERT INTO o_lresultsdetails (academicyr, medium, attempt, olsubject1, olgrade1, olsubject2, olgrade2, olsubject3, olgrade3, olsubject4, olgrade4, olsubject5, olgrade5, olsubject6, olgrade6, olsubject7, olgrade7, olsubject8, olgrade8, olsubject9, olgrade9) 
                                 VALUES('".$academicyr."', '".$medium."', '".$attempt."', '".$olsubject1."', '".$olgrade1."', '".$olsubject2."', '".$olgrade2."', '".$olsubject3."', '".$olgrade3."', '".$olsubject4."', '".$olgrade4."', '".$olsubject5."', '".$olgrade5."', '".$olsubject6."', '".$olgrade6."', '".$olsubject7."', '".$olgrade7."', '".$olsubject8."', '".$olgrade8."', '".$olsubject9."', '".$olgrade9."');")){
                                 echo "<script>alert('Record Successfully Added!')</script>";
                                 header("Location: index4.php");
