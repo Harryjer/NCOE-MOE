@@ -8,10 +8,12 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 
     <head>
+    <div style="background-image: url('image.jpg');"></div>
+
         <script src="~/Scripts/jquery-2.1.4.js"></script>
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
-        <title>Login and Registration Form with HTML5 and CSS3</title>
+        <title> National College of Education</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
@@ -30,70 +32,96 @@
         <div class="container">
             
             <header>
-                <h1>Personal Details Form</h1>
-				<nav class="personal_details_form">
-					
-				</nav>
+            <br>
+            <center>
+                <h2>National College of Education</h2>
+                </center>
+				<nav class="personal_details_form"></nav>
+                </br>
             </header>
             <section>				
                 <div id="container_demo" >
                    
                     <a class="hiddenanchor" id="toregister"></a>
                     <div id="wrapper">
+
+                    <div class="card" style="width: 70rem;">
+                    <br>
+            <center>
+                <h2>Personal Details Form</h2>
+                </center>
+				<nav class="personal_details_form"></nav>
+                </br>
                             
 
                         <div id="" class="animate form">
-                            <form method="post" action="personaldetailsubmit.php" autocomplete="on"> 
+                            <form class = "form-inline" method="post" action="personaldetailsubmit.php" autocomplete="on"> 
                                 
                                 <p>
-                                <div class="input-group input-group-sm mb-3">
-                                    <label for="fullname" class="fname" data-icon="u">Full nName</label>
+                                <div class=" input-group input-group-sm mb-3 col-6">
+                                <div class = "col-5" >
+                                    <label for="fullname" class="fname" data-icon="u">Full Name</label>
+                                </div>
+
                                     <input class="form-control" id="fullname" name="fullname" required="required" type="text" placeholder="full name" />
                                 </div>
                                 </p>
                                
-                               
+                              
                                 <p> 
-                                <div class="input-group input-group-sm mb-3">
+                                <div class="input-group input-group-sm mb-3 col-6">
+                                    <div class ="col-4">
                                     <label for="nameinitial" class="nameinitial" data-icon="e" > Name With Initial</label>
+                                    </div>
+
                                     <input class="form-control" id="nameinitial" name="nameinitial" required="required" type="text" placeholder="Name With Initial"/> 
                                 </div>
                                 </p>
                                
                                
                                 <p> 
-                                <div class="input-group input-group-sm mb-3">
+                                <div class="input-group input-group-sm mb-3 col-6">
+                                <div class ="col-5">
                                     <label for="paddress" class="paddress" data-icon="p">Permanent Address  </label>
+                                    </div>
                                     <input class="form-control" id="paddress" name="paddress" required="required" type="text" placeholder="permanent address"/>
                                 </div>
                                 </p>
                                
                                
                                 <p> 
-                                <div class="input-group input-group-sm mb-3">
+                                <div class="input-group input-group-sm mb-3 col-6">
+                                <div class ="col-4">
                                     <label for="cnumber" class="cnumber" data-icon="p">Contact Number </label>
+                                    </div>
                                     <input class="form-control" id="cnumber" name="cnumber" required="required" type="number" placeholder="xxx-xxxxxxx"/>
                                 </div>
                                 </p>
                                 <p> 
                                 
                                 
-                                <div class="input-group input-group-sm mb-3">
+                                <div class="input-group input-group-sm mb-3 col-6">
+                                <div class ="col-5">
                                     <label for="nic" class="nic" data-icon="p">National Identity Number </label>
+                                    </div>
                                     <input class="form-control" id="nic" name="nic" required="required" type="text" placeholder="xxxxxxxxxxV"/>
                                 </div>
                                 </p>
                                 <p>
-                                <div class="input-group input-group-sm mb-3"> 
+                                <div class="input-group input-group-sm mb-3 col-6"> 
+                                <div class ="col-4">
                                     <label for="dob" class="dob" data-icon="p">Date of Birth </label>
+                                    </div>
                                     <input class="form-control" id="dob" name="dob" required="required" type="date" placeholder="xx-xx-xxxx"/>
                                 </div>
                                 </p>
                                 
                                 
                                 <p>
-                            <div class="input-group input-group-sm mb-3"> 
+                            <div class="input-group input-group-sm mb-3 col-6"> 
+                            <div class ="col-5">
                                 <label for="" class="districtdetails_iddistrictdetails" data-icon="p">District of Permanent Residence </label>
+                                </div>
                                 <select name="districtdetails_iddistrictdetails" class="form-control">
                                 <option value="pick" disabled selected>District</option>
                                 <?php
@@ -110,8 +138,10 @@
                             </p>
 
                             <p>
-                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group input-group-sm mb-3 col-6">
+                            <div class ="col-4">
                                 <label for="" class="ethnicity_idethnicity" data-icon="p">Ethnicity </label>
+                                </div>
                                 <select name="ethnicity_idethnicity" class="form-control">
                                 <option value="pick" disabled>Ethnicity</option>
                                 <?php
@@ -126,8 +156,10 @@
                             </p>
 
                             <p>
-                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group input-group-sm mb-3 col-6">
+                            <div class ="col-5">
                                 <label for="" class="religiondetails_idreligiondetails" data-icon="p">Religion </label>
+                                </div>
                                 <select name="religiondetails_idreligiondetails" class="form-control">
                                 <option value="pick" disabled>Religion</option>
                                 <?php
@@ -142,8 +174,10 @@
                             </p>
 
                             <p>
-                            <div class="input-group input-group-sm mb-3">
+                            <div class="input-group input-group-sm mb-3 col-6">
+                            <div class ="col-4">
                                 <label for="" class="genderdetails_idgenderdetails" data-icon="p">Gender </label>
+                                </div>
                                 <select name="genderdetails_idgenderdetails" class="form-control">
                                 <option value="pick" disabled>Gender</option>
                                 <?php
@@ -158,9 +192,11 @@
                             </p>      
 
                             <p>
-                            <div class="input-group input-group-sm mb-3">    
+                            <div class="input-group input-group-sm mb-3 col-6">    
                                 <br>
+                                <div class ="col-5">
                                 <label for="" class="attemptcount" data-icon="p">Number of Attempts (Advanced Level) </label>
+                                </div>
                                 <select name="attemptcount" class="form-control">
                                 <option value="pick" disabled>attempt</option>
                                 <?php
@@ -171,14 +207,29 @@
                                 }
                                 ?>
                                 </select>
-                            </div>        
-                                </br>
+                            </div>  
+
+                            <!-- <div class="col-6">
+                            
+                            </div> -->
+
+                            <div class="col-6">
+                            
+                            </div>
+                            
                             </p>
-                            <br>
-                                <input id="btnSubmit" class="btn success" type="submit" name="submit" value="Submit"> <a href="index2.php"></a>
-          
+                            <!-- <div class="d-flex"> -->
+                            <div class="col-12" align="right" style="align:right">
+                                <input id="btnSubmit" class="btn btn-primary" type="submit" name="submit" value="Submit"> <a href="index2.php"></a>
+                                <input class="btn btn-danger" type="reset" value="Reset">
+                            
+                            </div>
+                            </div>
+                        
+                            </form>
+
            
-                        </br>   
+    
                             
 
                                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
